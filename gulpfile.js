@@ -13,14 +13,15 @@ var config = {
     port: 9005,
     devBaseUrl: 'http://localhost',
     paths: {
-        html: './src/*.html',
-        js: './src/**/*.js',
+        html: 'src/*.html',
+        js: 'src/**/*.js',
+        images: 'src/images/*',
         css: [
-            './node_modules/bootstrap/dist/css/bootstrap.min.css',
-            './node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
+            'node_modules/bootstrap/dist/css/bootstrap.min.css',
+            'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
         ],
-        dist: './dist',
-        mainJs: './src/main.js'
+        dist: 'dist',
+        mainJs: 'src/main.js'
     }
 }
 
@@ -35,7 +36,7 @@ gulp.task('connect', () => {
 });
 
 gulp.task('open', ['connect'], () => {
-    gulp.src('./dist/index.html')
+    gulp.src('dist/index.html')
         .pipe(open({ url: `${config.devBaseUrl}+${config.port}/` }));
 });
 
@@ -67,9 +68,21 @@ gulp.task('lint', () => {
         .pipe(eslint.format());
 });
 
+// Migrates images to dist folder
+// Note that I could even optimize my images here
+gulp.task('images', function () {
+    gulp.src(config.paths.images)
+        .pipe(gulp.dest(config.paths.dist + '/images'))
+        .pipe(connect.reload());
+
+    //publish favicon
+    gulp.src('src/favicon.ico')
+        .pipe(gulp.dest(config.paths.dist));
+});
+
 gulp.task('watch', () => {
     gulp.watch(config.paths.html, ['html']);
     gulp.watch(config.paths.js, ['js', 'lint']);
 });
 
-gulp.task('default', ['html', 'js', 'css', 'lint', 'open', 'watch']);
+gulp.task('default', ['html', 'js', 'css', 'images', 'lint', 'open', 'watch']);
