@@ -62,3 +62,6 @@ typings/
 
 # project specific
 dist
+
+# IDE
+.vscode
