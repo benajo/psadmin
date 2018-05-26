@@ -19,7 +19,7 @@ var AuthorApi = {
     },
 
     getAuthorById: function(id) {
-        var author = _.find(authors, {id: id});
+        var author = _.find(authors, { id: id });
         return _clone(author);
     },
 
@@ -28,7 +28,7 @@ var AuthorApi = {
         console.log('Pretend this just saved the author to the DB via AJAX call...');
 
         if (author.id) {
-            var existingAuthorIndex = _.indexOf(authors, _.find(authors, {id: author.id}));
+            var existingAuthorIndex = _.indexOf(authors, _.find(authors, { id: author.id }));
             authors.splice(existingAuthorIndex, 1, author);
         } else {
             //Just simulating creation here.
@@ -43,7 +43,7 @@ var AuthorApi = {
 
     deleteAuthor: function(id) {
         console.log('Pretend this just deleted the author from the DB via an AJAX call...');
-        _.remove(authors, { id: id});
+        _.remove(authors, { id: id });
     }
 };
 
