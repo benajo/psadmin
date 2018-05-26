@@ -14,7 +14,8 @@
       "no-unused-vars": 0,
       "no-underscore-dangle": 0,
       "no-alert": 0,
-      "no-lone-blocks": 0
+      "no-lone-blocks": 0,
+      "indent": [2, 4]
     },
     "globals": {
       "jQuery": true,
