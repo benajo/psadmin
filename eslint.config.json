@@ -8,14 +8,15 @@
       "jquery": true
     },
     "rules": {
-      "quotes": 0,
-      "no-trailing-spaces": 0,
+      "quotes": [1, "single"],
+      "no-trailing-spaces": 1,
       "eol-last": 1,
       "no-unused-vars": 0,
       "no-underscore-dangle": 0,
       "no-alert": 0,
-      "no-lone-blocks": 0,
-      "indent": [2, 4]
+      "no-lone-blocks": 1,
+      "indent": [2, 4],
+      "object-curly-spacing": [1, "always"]
     },
     "globals": {
       "jQuery": true,
