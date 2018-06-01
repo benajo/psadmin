@@ -13,7 +13,7 @@ var ManageAuthorPage = React.createClass({
     ],
     statics: {
         willTransitionFrom: function(transition, component) {
-            if (component.state.dirty && !confirm('Lease without saving?')) {
+            if (component.state.dirty && !confirm('Leave without saving?')) {
                 transition.abort();
             }
         }

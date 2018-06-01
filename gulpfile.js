@@ -71,7 +71,7 @@ gulp.task('lint', () => {
 
 // Migrates images to dist folder
 // Note that I could even optimize my images here
-gulp.task('images', function () {
+gulp.task('images', () => {
     gulp.src(config.paths.images)
         .pipe(gulp.dest(config.paths.dist + '/images'))
         .pipe(connect.reload());
