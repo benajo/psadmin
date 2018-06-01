@@ -9,20 +9,20 @@ var toastr = require('toastr');
 
 var ManageAuthorPage = React.createClass({
     mixins: [
-        Router.Navigation
+        Router.Navigation,
     ],
     statics: {
         willTransitionFrom: function(transition, component) {
             if (component.state.dirty && !confirm('Leave without saving?')) {
                 transition.abort();
             }
-        }
+        },
     },
     getInitialState: function() {
         return {
             author: { id: '', firstName: '', lastName: '' },
             errors: {},
-            dirty: false
+            dirty: false,
         };
     },
     componentWillMount: function() {
@@ -79,7 +79,7 @@ var ManageAuthorPage = React.createClass({
                 onChange={this.setAuthorState}
                 onSave={this.saveAuthor} />
         );
-    }
+    },
 });
 
 module.exports = ManageAuthorPage;

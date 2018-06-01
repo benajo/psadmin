@@ -21,7 +21,7 @@ var About = React.createClass({
                 </p>
             </div>
         );
-    }
+    },
 });
 
 module.exports = About;

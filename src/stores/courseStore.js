@@ -18,7 +18,6 @@ var CourseStore = assign({}, EventEmitter.prototype, {
         this.removeListener(CHANGE_EVENT, callback);
     },
     emitChange: function() {
-        console.log(_courses);
         this.emit(CHANGE_EVENT);
     },
     getAllCourses: function() {
@@ -26,7 +25,7 @@ var CourseStore = assign({}, EventEmitter.prototype, {
     },
     getCourseById: function(id) {
         return _.find(_courses, { id: id });
-    }
+    },
 });
 
 Dispatcher.register(function(action) {

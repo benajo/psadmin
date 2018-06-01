@@ -7,10 +7,10 @@ module.exports = {
             author: {
                 id: 'cory-house',
                 firstName: 'Cory',
-                lastName: 'House'
+                lastName: 'House',
             },
             length: '3:10',
-            category: 'Software Practices'
+            category: 'Software Practices',
         },
         {
             id: 'architecture',
@@ -19,10 +19,10 @@ module.exports = {
             author: {
                 id: 'cory-house',
                 firstName: 'Cory',
-                lastName: 'House'
+                lastName: 'House',
             },
             length: '2:52',
-            category: 'Software Architecture'
+            category: 'Software Architecture',
         },
         {
             id: 'career-reboot-for-developer-mind',
@@ -31,10 +31,10 @@ module.exports = {
             author: {
                 id: 'cory-house',
                 firstName: 'Cory',
-                lastName: 'House'
+                lastName: 'House',
             },
             length: '2:30',
-            category: 'Career'
+            category: 'Career',
         },
         {
             id: 'web-components-shadow-dom',
@@ -43,10 +43,10 @@ module.exports = {
             author: {
                 id: 'cory-house',
                 firstName: 'Cory',
-                lastName: 'House'
+                lastName: 'House',
             },
             length: '5:10',
-            category: 'HTML5'
-        }
-    ]
+            category: 'HTML5',
+        },
+    ],
 };

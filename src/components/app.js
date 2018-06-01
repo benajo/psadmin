@@ -21,7 +21,7 @@ var App = React.createClass({
                 </div>
             </div>
         );
-    }
+    },
 });
 
 module.exports = App;

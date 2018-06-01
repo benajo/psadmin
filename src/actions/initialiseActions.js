@@ -11,10 +11,10 @@ var InitialiseActions = {
             actionType: ActionTypes.INITIALISE,
             initialData: {
                 authors: AuthorApi.getAllAuthors(),
-                courses: CourseApi.getAllCourses()
-            }
+                courses: CourseApi.getAllCourses(),
+            },
         });
-    }
+    },
 };
 
 module.exports = InitialiseActions;

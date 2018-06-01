@@ -10,7 +10,7 @@ var Select = React.createClass({
       onChange: React.PropTypes.func.isRequired,
       placeholder: React.PropTypes.string.isRequired,
       value: React.PropTypes.string,
-      error: React.PropTypes.string
+      error: React.PropTypes.string,
     },
 
     render: function() {
@@ -42,7 +42,7 @@ var Select = React.createClass({
                 </div>
             </div>
         );
-    }
+    },
 });
 
 module.exports = Select;

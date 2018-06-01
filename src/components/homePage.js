@@ -13,7 +13,7 @@ var Home = React.createClass({
                 <Link to="about" className="btn btn-primary btn-lg">Learn More</Link>
             </div>
         );
-    }
+    },
 });
 
 module.exports = Home;

@@ -4,17 +4,17 @@ module.exports = {
         {
             id: 'cory-house',
             firstName: 'Cory',
-            lastName: 'House'
+            lastName: 'House',
         },
         {
             id: 'scott-allen',
             firstName: 'Scott',
-            lastName: 'Allen'
+            lastName: 'Allen',
         },
         {
             id: 'dan-wahlin',
             firstName: 'Dan',
-            lastName: 'Wahlin'
-        }
-    ]
+            lastName: 'Wahlin',
+        },
+    ],
 };

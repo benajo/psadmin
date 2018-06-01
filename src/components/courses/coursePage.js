@@ -10,7 +10,7 @@ var CourseList = require('./courseList');
 var CoursePage = React.createClass({
     getInitialState: function() {
         return {
-            courses: CourseStore.getAllCourses()
+            courses: CourseStore.getAllCourses(),
         };
     },
     componentWillMount: function() {
@@ -31,7 +31,7 @@ var CoursePage = React.createClass({
                 <CourseList courses={this.state.courses}/>
             </div>
         );
-    }
+    },
 });
 
 module.exports = CoursePage;

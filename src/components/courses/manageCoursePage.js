@@ -10,14 +10,14 @@ var toastr = require('toastr');
 
 var ManageCoursePage = React.createClass({
     mixins: [
-        Router.Navigation
+        Router.Navigation,
     ],
     statics: {
         willTransitionFrom: function(transition, component) {
             if (component.state.dirty && !confirm('Leave without saving?')) {
                 transition.abort();
             }
-        }
+        },
     },
     getInitialState: function() {
         return {
@@ -27,11 +27,11 @@ var ManageCoursePage = React.createClass({
                 author: '',
                 category: '',
                 length: '',
-                watchHref: ''
+                watchHref: '',
             },
             authors: AuthorStore.getAllAuthors(),
             errors: {},
-            dirty: false
+            dirty: false,
         };
     },
     componentWillMount: function() {
@@ -64,7 +64,7 @@ var ManageCoursePage = React.createClass({
             this.state.errors.category = 'Category must be at least 3 characters.';
             formIsValid = false;
         }
-        if (this.state.course['length'].length < 1) {
+        if (this.state.course.length.length < 1) {
             this.state.errors.courseLength = 'Length must be of format h:mm.';
             formIsValid = false;
         }
@@ -101,7 +101,7 @@ var ManageCoursePage = React.createClass({
                 onChange={this.setCourseState}
                 onSave={this.saveCourse} />
         );
-    }
+    },
 });
 
 module.exports = ManageCoursePage;

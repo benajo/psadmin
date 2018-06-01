@@ -9,7 +9,7 @@ var Input = React.createClass({
       onChange: React.PropTypes.func.isRequired,
       placeholder: React.PropTypes.string,
       value: React.PropTypes.string,
-      error: React.PropTypes.string
+      error: React.PropTypes.string,
     },
 
     render: function() {
@@ -33,7 +33,7 @@ var Input = React.createClass({
                 </div>
             </div>
         );
-    }
+    },
 });
 
 module.exports = Input;

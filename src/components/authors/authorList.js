@@ -8,7 +8,7 @@ var toastr = require('toastr');
 
 var AuthorList = React.createClass({
     propTypes: {
-        authors: React.PropTypes.array.isRequired
+        authors: React.PropTypes.array.isRequired,
     },
     deleteAuthor: function(id, event) {
         event.preventDefault();
@@ -40,7 +40,7 @@ var AuthorList = React.createClass({
                 </table>
             </div>
         );
-    }
+    },
 });
 
 module.exports = AuthorList;

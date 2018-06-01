@@ -11,7 +11,7 @@ var CourseActions = {
         // hey dispatcher, go tell all the stores that an course was just created
         Dispatcher.dispatch({
             actionType: ActionTypes.CREATE_COURSE,
-            course: newCourse
+            course: newCourse,
         });
     },
     updateCourse: function(course) {
@@ -19,7 +19,7 @@ var CourseActions = {
 
         Dispatcher.dispatch({
             actionType: ActionTypes.UPDATE_COURSE,
-            course: updatedCourse
+            course: updatedCourse,
         });
     },
     deleteCourse: function(id) {
@@ -27,9 +27,9 @@ var CourseActions = {
 
         Dispatcher.dispatch({
             actionType: ActionTypes.DELETE_COURSE,
-            id: id
+            id: id,
         });
-    }
+    },
 };
 
 module.exports = CourseActions;

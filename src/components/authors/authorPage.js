@@ -10,7 +10,7 @@ var AuthorList = require('./authorList');
 var AuthorPage = React.createClass({
     getInitialState: function() {
         return {
-            authors: AuthorStore.getAllAuthors()
+            authors: AuthorStore.getAllAuthors(),
         };
     },
     componentWillMount: function() {
@@ -31,7 +31,7 @@ var AuthorPage = React.createClass({
                 <AuthorList authors={this.state.authors}/>
             </div>
         );
-    }
+    },
 });
 
 module.exports = AuthorPage;

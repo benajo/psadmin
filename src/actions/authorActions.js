@@ -11,7 +11,7 @@ var AuthorActions = {
         // hey dispatcher, go tell all the stores that an author was just created
         Dispatcher.dispatch({
             actionType: ActionTypes.CREATE_AUTHOR,
-            author: newAuthor
+            author: newAuthor,
         });
     },
     updateAuthor: function(author) {
@@ -19,7 +19,7 @@ var AuthorActions = {
 
         Dispatcher.dispatch({
             actionType: ActionTypes.UPDATE_AUTHOR,
-            author: updatedAuthor
+            author: updatedAuthor,
         });
     },
     deleteAuthor: function(id) {
@@ -27,9 +27,9 @@ var AuthorActions = {
 
         Dispatcher.dispatch({
             actionType: ActionTypes.DELETE_AUTHOR,
-            id: id
+            id: id,
         });
-    }
+    },
 };
 
 module.exports = AuthorActions;

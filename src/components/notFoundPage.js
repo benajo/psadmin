@@ -12,7 +12,7 @@ var NotFoundPage = React.createClass({
                 <p><Link to="app">Back to Home</Link></p>
             </div>
         );
-    }
+    },
 });
 
 module.exports = NotFoundPage;
